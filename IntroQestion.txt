@@ -1,0 +1,160 @@
+1. Write a program to print your name in Dart.
+Answer:
+void main() {
+  print("My name is Zamil");
+}
+
+2. Write a program to print Hello I am “John Doe” and Hello I’am “John Doe” with single and double quotes.
+Answer:
+void main() {
+  print('Hello I am "John Doe"');
+  print("Hello I'am \"John Doe\"");
+}
+
+3. Declare constant type of int set value 7.
+Answer:
+void main() {
+  const int number = 7;
+  print(number);
+}
+
+4. Write a program in Dart that finds simple interest. Formula= (p * t * r) / 100
+Answer:
+import 'dart:io';
+void main() {
+  stdout.write("Enter the principal amount (p): ");
+  double principal = double.parse(stdin.readLineSync()!);
+
+  stdout.write("Enter the time in years (t): ");
+  double time = double.parse(stdin.readLineSync()!);
+
+  stdout.write("Enter the rate of interest (r) in %: ");
+  double rate = double.parse(stdin.readLineSync()!);
+
+  double simpleInterest = (principal * time * rate) / 100;
+
+  print("The Simple Interest is: $simpleInterest");
+}
+
+5. Write a program to print a square of a number using user input.
+Answer: 
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter a number: ");
+  double number = double.parse(stdin.readLineSync()!);
+
+  double square = number * number;
+
+  print("The square of $number is: $square");
+}
+
+6. Write a program to print full name of a from first name and last name using user input.
+Answer:
+import 'dart:io';
+void main() {
+  stdout.write("Enter your first name: ");
+  String firstName = stdin.readLineSync()!;
+
+  stdout.write("Enter your last name: ");
+  String lastName = stdin.readLineSync()!;
+
+  String fullName = "$firstName $lastName";
+
+  print("Your full name is: $fullName");
+}
+7. Write a program to find quotient and remainder of two integers.
+Answer:
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter the first integer: ");
+  int dividend = int.parse(stdin.readLineSync()!);
+
+  stdout.write("Enter the second integer: ");
+  int divisor = int.parse(stdin.readLineSync()!);
+
+  int quotient = dividend ~/ divisor;
+  int remainder = dividend % divisor;
+
+  print("Quotient: $quotient");
+  print("Remainder: $remainder");
+}
+
+8. Write a program to swap two numbers.
+Answer:
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter the first number: ");
+  int a = int.parse(stdin.readLineSync()!);
+
+  stdout.write("Enter the second number: ");
+  int b = int.parse(stdin.readLineSync()!);
+
+  print("Before swapping: a = $a, b = $b");
+
+  int temp = a;
+  a = b;
+  b = temp;
+
+  print("After swapping: a = $a, b = $b");
+}
+
+9. Write a program in Dart to remove all whitespaces from String.
+Answer:
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter a string: ");
+  String input = stdin.readLineSync()!;
+
+  String noSpaces = input.replaceAll(' ', '');
+
+  print("String without whitespaces: $noSpaces");
+}
+
+10. Write a Dart program to convert String to int.
+Answer:
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter a number as a string: ");
+  String input = stdin.readLineSync()!;
+
+  int number = int.parse(input);
+
+  print("The integer value is: $number");
+}
+
+11. Suppose, you often go to restaurant with friends and you have to split amount of bill. Write a program to calculate split amount of bill. Formula= (total bill amount) / number of people
+Answer:
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter the total bill amount: ");
+  double totalBill = double.parse(stdin.readLineSync()!);
+
+  stdout.write("Enter the number of people: ");
+  int people = int.parse(stdin.readLineSync()!);
+
+  double splitAmount = totalBill / people;
+
+  print("Each person should pay: $splitAmount");
+}
+
+12. Suppose, your distance to office from home is 25 km and you travel 40 km per hour. Write a program to calculate time taken to reach office in minutes. Formula= (distance) / (speed)
+Answer:
+import 'dart:io';
+void main() {
+  stdout.write("Enter the distance to office (in km): ");
+  double distance = double.parse(stdin.readLineSync()!);
+
+  stdout.write("Enter your speed (in km/h): ");
+  double speed = double.parse(stdin.readLineSync()!);
+
+  double timeInHours = distance / speed;
+  double timeInMinutes = timeInHours * 60;
+
+  print("Time taken to reach office: $timeInMinutes minutes");
+}

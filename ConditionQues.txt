@@ -1,0 +1,170 @@
+1.Write a dart program to check if the number is odd or even.
+Answer:
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter a number: ");
+  int number = int.parse(stdin.readLineSync()!);
+
+  if (number % 2 == 0) {
+    print("$number is even.");
+  } else {
+    print("$number is odd.");
+  }
+}
+
+2.Write a dart program to check whether a character is a vowel or consonant.
+Answer:
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter a single character: ");
+  String char = stdin.readLineSync()!;
+
+  if (char.length != 1) {
+    print("Please enter only a single character.");
+    return;
+  }
+
+  String lowerChar = char.toLowerCase();
+
+  if (lowerChar == 'a' || lowerChar == 'e' || lowerChar == 'i' || lowerChar == 'o' || lowerChar == 'u') {
+    print("$char is a vowel.");
+  } else if (lowerChar.codeUnitAt(0) >= 97 && lowerChar.codeUnitAt(0) <= 122) {
+    print("$char is a consonant.");
+  } else {
+    print("$char is not an alphabet character.");
+  }
+}
+
+3.Write a dart program to check whether a number is positive, negative, or zero.
+Answer:
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter a number: ");
+  double number = double.parse(stdin.readLineSync()!);
+
+  if (number > 0) {
+    print("$number is positive.");
+  } else if (number < 0) {
+    print("$number is negative.");
+  } else {
+    print("The number is zero.");
+  }
+}
+
+4.Write a dart program to print your name 100 times.
+Answer:
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter your name: ");
+  String name = stdin.readLineSync()!;
+
+  for (int i = 1; i <= 100; i++) {
+    print("$i. $name");
+  }
+}
+
+5.Write a dart program to calculate the sum of natural numbers.
+Answer:
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter a positive integer n: ");
+  int n = int.parse(stdin.readLineSync()!);
+
+  int sum = 0;
+
+  for (int i = 1; i <= n; i++) {
+    sum += i;
+  }
+
+  print("The sum of first $n natural numbers is: $sum");
+}
+
+6.Write a dart program to generate multiplication tables of 5.
+Answer:
+void main() {
+  int number = 5;
+
+  print("Multiplication table of $number:");
+
+  for (int i = 1; i <= 10; i++) {
+    print("$number x $i = ${number * i}");
+  }
+}
+
+
+7.Write a dart program to generate multiplication tables of 1-9.
+Answer:
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter your name: ");
+  String name = stdin.readLineSync()!;
+
+  for (int i = 1; i <= 100; i++) {
+    print("$i. $name");
+  }
+}
+
+8.Write a dart program to create a simple calculator that performs addition, subtraction, multiplication, and division.
+Answer:
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter first number: ");
+  double num1 = double.parse(stdin.readLineSync()!);
+
+  stdout.write("Enter second number: ");
+  double num2 = double.parse(stdin.readLineSync()!);
+
+  print("Choose an operation:");
+  print("1. Addition (+)");
+  print("2. Subtraction (-)");
+  print("3. Multiplication (*)");
+  print("4. Division (/)");
+
+  stdout.write("Enter your choice (1/2/3/4): ");
+  int choice = int.parse(stdin.readLineSync()!);
+
+  double result;
+
+  switch (choice) {
+    case 1:
+      result = num1 + num2;
+      print("Result: $num1 + $num2 = $result");
+      break;
+    case 2:
+      result = num1 - num2;
+      print("Result: $num1 - $num2 = $result");
+      break;
+    case 3:
+      result = num1 * num2;
+      print("Result: $num1 * $num2 = $result");
+      break;
+    case 4:
+      if (num2 != 0) {
+        result = num1 / num2;
+        print("Result: $num1 / $num2 = $result");
+      } else {
+        print("Error: Division by zero is not allowed.");
+      }
+      break;
+    default:
+      print("Invalid choice! Please enter 1, 2, 3, or 4.");
+  }
+}
+
+9.Write a dart program to print 1 to 100 but not 41.
+Answer:
+void main() {
+  for (int i = 1; i <= 100; i++) {
+    if (i == 41) {
+      continue; 
+    }
+    print(i);
+  }
+}
